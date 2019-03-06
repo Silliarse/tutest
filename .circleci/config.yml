@@ -13,7 +13,7 @@ jobs:
     steps:
       - checkout
       - run: echo "code coverage"
-      - run: chmod u+w /home/sonarqube
+      - run: chown -R $USER:$USER /home
       - run: sonar-scanner \
             -Dsonar.projectKey=Silliarse_tutest \
             -Dsonar.organization=silliarse-github \
@@ -25,5 +25,4 @@ workflows:
     version: 2
     build_and_test:
       jobs:
-       - build
        - test
