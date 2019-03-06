@@ -1,4 +1,4 @@
-version: 3
+version: 2
 jobs:
   build:
     docker:
@@ -13,18 +13,17 @@ jobs:
     steps:
       - checkout
       - run: echo "code coverage"
+      - run: chown -R $USER:$USER $HOME
       - run: sonar-scanner \
             -Dsonar.projectKey=Silliarse_tutest \
             -Dsonar.organization=silliarse-github \
             -Dsonar.sources=. \
             -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.login=8c21f04e8a034bd99f5f9abec527dad0668fc495
-<<<<<<< HEAD
+
 workflows:
-    version: 3
+    version: 2
     build_and_test:
       jobs:
        - build
        - test
-=======
->>>>>>> 21bd1bb615d788a131f92cf162271bdc1517ab4c
