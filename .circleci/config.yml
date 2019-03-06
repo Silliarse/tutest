@@ -9,7 +9,7 @@ jobs:
       - run: python test.py
   test:
     docker:
-      - image: circleci/python:3.7.0
+      - image: sonarqube
     steps:
       - checkout
       - run: echo "code coverage"
