@@ -13,7 +13,7 @@ jobs:
     steps:
       - checkout
       - run: echo "code coverage"
-      - run: sudo su
+      - run: sudo su ||
       - run: sonar-scanner \
          -Dsonar.projectKey=Silliarse_tutest \
          -Dsonar.organization=silliarse-github \
