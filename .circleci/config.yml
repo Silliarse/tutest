@@ -18,8 +18,7 @@ jobs:
       - run: sudo pip install coverage
       - run: coverage run test.py
       - codecov/upload:
-         file: /home/
-         token: 'c2b5b02e-7329-4dba-b154-a17f83a1c14f'
+         file: report.xml
 
 workflows:
     version: 2.1
