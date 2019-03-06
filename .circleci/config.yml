@@ -16,8 +16,7 @@ jobs:
       - checkout
       - run: echo "code coverage"
       - codecov/upload:
-         file: report.xml
-         token: "c2b5b02e-7329-4dba-b154-a17f83a1c14f"
+         token: c2b5b02e-7329-4dba-b154-a17f83a1c14f
 
 workflows:
     version: 2.1
