@@ -1,6 +1,6 @@
 version: 2
-orbs:
-  codecov: codecov/codecov@1.0.2
+#orbs:
+#  codecov: codecov/codecov@1.0.2
 jobs:
   build:
     docker:
@@ -11,12 +11,12 @@ jobs:
       - run: python test.py
   coverage:
     docker:
-      - image: sonarqube
+      - image: circleci/python:3.7.0
     steps:
       - checkout
       - run: echo "code coverage"
-      - codecov/upload:
-        file: {{ coverage_report_filepath }}
+#      - codecov/upload:
+#        file: {{ coverage_report_filepath }}
 
 workflows:
     version: 2
