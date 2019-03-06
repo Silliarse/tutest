@@ -1,8 +1,10 @@
-def add(a, b):
-	return a+b
+import unittest
 
-def sub(a, b):
-	return a-b
+def add(a, b):
+	if(isinstance(a,(int,float)) and isinstance(b,(int,float))):
+		return a+b
+	else:
+		return "error"
 	
 print(add(1,3))
-print(sub(4,1))
+print(add(1,2))
