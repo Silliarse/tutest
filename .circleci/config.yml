@@ -7,3 +7,16 @@ jobs:
       - checkout
       - run: echo "A first hello"
       - run: python test.py
+      - run: test
+  test:
+    docker:
+      - image: sonarqube
+    steps:
+      - checkout
+      - run: echo "code coverage"
+      - run: sonar-scanner \
+            -Dsonar.projectKey=Silliarse_tutest \
+            -Dsonar.organization=silliarse-github \
+            -Dsonar.sources=. \
+            -Dsonar.host.url=https://sonarcloud.io \
+            -Dsonar.login=8c21f04e8a034bd99f5f9abec527dad0668fc495
