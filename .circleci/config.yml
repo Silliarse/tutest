@@ -17,9 +17,7 @@ jobs:
       - run: echo "code coverage"
       - run: sudo pip install coverage
       - run: coverage run test.py
-      - codecov/upload:
-         token: c2b5b02e-7329-4dba-b154-a17f83a1c14f
-         file: report.xml
+      - run: bash <(curl -s https://codecov.io/bash) -t c2b5b02e-7329-4dba-b154-a17f83a1c14f
 
 workflows:
     version: 2.1
