@@ -25,9 +25,4 @@ workflows:
     version: 2
     build_and_test:
       jobs:
-<<<<<<< HEAD
        - build
-       - test
-=======
-       - test
->>>>>>> 3c364c9aad55e4e362a5305cae04d5dfc87e5298
