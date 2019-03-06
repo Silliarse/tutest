@@ -17,7 +17,6 @@ jobs:
       - run: echo "code coverage"
       - run: sudo pip install coverage
       - codecov/upload:
-         conf: .coverage.yml
          file: /home/
          token: "c2b5b02e-7329-4dba-b154-a17f83a1c14f"
 
