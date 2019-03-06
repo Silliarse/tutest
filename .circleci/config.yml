@@ -7,7 +7,6 @@ jobs:
       - checkout
       - run: echo "A first hello"
       - run: python test.py
-      test
   test:
     docker:
       - image: sonarqube
