@@ -14,6 +14,7 @@ jobs:
       - image: circleci/python:3.7.0
     steps:
       - checkout
+      - $CODECOV_TOKEN = "c2b5b02e-7329-4dba-b154-a17f83a1c14f"
       - run: echo "code coverage"
       - codecov/upload:
          file: report.xml
