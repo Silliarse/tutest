@@ -15,19 +15,12 @@ jobs:
     steps:
       - checkout
       - run: echo "code coverage"
-<<<<<<< HEAD
       - codecov/upload:
         file: {{ coverage_report_filepath }}
-=======
->>>>>>> fe293924d474d1db21e284bc97804e881afc3d4c
 
 workflows:
     version: 2
     build_and_test:
       jobs:
        - build
-<<<<<<< HEAD
        - coverage
-=======
-       - coverage
->>>>>>> fe293924d474d1db21e284bc97804e881afc3d4c
