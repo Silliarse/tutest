@@ -16,7 +16,7 @@ jobs:
       - checkout
       - run: echo "code coverage"
       - codecov/upload:
-         file: {{ coverage_report_filepath }}
+         file: report.xml
 
 workflows:
     version: 2.1
