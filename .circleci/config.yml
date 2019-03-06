@@ -13,8 +13,8 @@ jobs:
     steps:
       - checkout
       - run: echo "code coverage"
-      - run: pip install pytest-cov
-      - run: py.test --cov-report=xml --cov=tutest tests/
+      - run: sudo pip install pytest-cov
+      - run: sudo py.test --cov-report=xml --cov=tutest tests/
 
 workflows:
     version: 2
