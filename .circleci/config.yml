@@ -13,8 +13,12 @@ jobs:
     steps:
       - checkout
       - run: echo "code coverage"
-      - run: sudo pip install pytest-cov
-      - run: sudo py.test --cov-report=xml --cov=tutest
+      - run: sudo sonar-scanner \
+         -Dsonar.projectKey=Silliarse_tutest \
+         -Dsonar.organization=silliarse-github \
+         -Dsonar.sources=. \
+         -Dsonar.host.url=https://sonarcloud.io \
+         -Dsonar.login=f0097e357d891a0a229766649346c4d2a3e470df
 
 workflows:
     version: 2
